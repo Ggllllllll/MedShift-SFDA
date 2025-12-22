@@ -24,6 +24,20 @@
 
 <p align="center"><img src="6.png" width="90%"></p>
 
+### Clinical significance of this benchmark
+```shell
+In clinical practice, understanding domain shift severity is essential for deploying trustworthy AI systems across heterogeneous environments. For instance, transferring a segmentation model trained on high-resolution hospital-grade ultrasound to portable devices used in resource-limited clinics constitutes a high-shift scenario, where image quality, anatomical visibility, and patient demographics may all differ. The difficulty-graded benchmark provided by MedShift-SFDA offers valuable guidance for:
+
+1. Model selection based on clinical deployment context
+
+For settings with low domain shift (e.g., same modality, equipment, and anatomy), lightweight methods like ADAMI or DPL are sufficient. In medium shift settings (e.g., cross-center, moderate anatomical variation), robust contrastive and correction-based strategies like PCPDL or CBMT are preferable. For high shift domains (e.g., complex pathology), more advanced models with semantic consistency mechanisms are required.
+
+2. Risk estimation and adaptation planning
+
+Clinicians and engineers can use domain shift metrics (e.g., MMD + t-SNE visualizations) to anticipate adaptation challenges, proactively select suitable methods, or even trigger model revalidation before clinical deployment.
+
+In summary, our benchmark not only evaluates SFDA algorithmic performance but also bridges the gap between method development and real-world healthcare deployment, offering practical insights for building safe, reliable, and generalizable medical AI systems.
+```
 ### Dependency Preparation
 ```shell
 cd MedShift-SFDA
