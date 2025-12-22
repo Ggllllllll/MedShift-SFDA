@@ -12,6 +12,10 @@
 
 <p align="center"><img src="3.png" width="90%"></p>
 
+### The figure below illustrates the domain shift classification between different modal datasets.
+
+<p align="center"><img src="4.png" width="90%"></p>
+
 ### Dependency Preparation
 ```shell
 cd MedShift-SFDA
