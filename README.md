@@ -20,6 +20,10 @@
 
 <p align="center"><img src="5.png" width="90%"></p>
 
+### The table illustrates the key technical aspects and adaptations of different methods.
+
+<p align="center"><img src="6.png" width="90%"></p>
+
 ### Dependency Preparation
 ```shell
 cd MedShift-SFDA
