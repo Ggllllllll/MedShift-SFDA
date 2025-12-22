@@ -8,6 +8,10 @@
 
 <p align="center"><img src="2.png" width="90%"></p>
 
+### The image below shows a visualization of inter-dataset domain shift.  
+
+<p align="center"><img src="3.png" width="90%"></p>
+
 ### Dependency Preparation
 ```shell
 cd MedShift-SFDA
