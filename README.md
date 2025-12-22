@@ -2,7 +2,7 @@
 
 ### The image below shows a comparison of the segmentation before and after SFDA approval.
 
-<p align="center"><img src="figures/1.png" width="90%"></p>
+<p align="center"><img src="1.png" width="90%"></p>
 
 ### Dependency Preparation
 ```shell
