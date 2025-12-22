@@ -4,6 +4,10 @@
 
 <p align="center"><img src="1.png" width="90%"></p>
 
+### The following images show examples and ground truth masks for 16 datasets in MedShift-SFDA.
+
+<p align="center"><img src="2.png" width="90%"></p>
+
 ### Dependency Preparation
 ```shell
 cd MedShift-SFDA
