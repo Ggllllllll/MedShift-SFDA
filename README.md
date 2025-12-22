@@ -16,6 +16,10 @@
 
 <p align="center"><img src="4.png" width="90%"></p>
 
+### The figure below visualizes the segmentation performance of six methods at different domain shift levels, highlighting the challenges encountered as the difficulty increases.
+
+<p align="center"><img src="5.png" width="90%"></p>
+
 ### Dependency Preparation
 ```shell
 cd MedShift-SFDA
