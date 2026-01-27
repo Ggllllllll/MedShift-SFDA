@@ -1,6 +1,7 @@
 # :page_facing_up: MedShift-SFDA: A Difficulty-graded Benchmark for Source-Free Domain Adaptation in Medical Image Segmentation
 
 ### The image below shows a comparison of the segmentation before and after SFDA approval.
+SFDA enables the model to adapt and achieve accurate segmentation in the target domain without accessing the source data.
 
 <p align="center"><img src="1.png" width="90%"></p>
 
