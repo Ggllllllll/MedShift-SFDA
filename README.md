@@ -13,7 +13,7 @@
 <p align="center"><img src="4.png" width="90%"></p>
 
 
-### The table illustrates the key technical aspects and adaptations of different methods.
+### The table 1 illustrates the key technical aspects and adaptations of different methods.
 
 <p align="center"><img src="6.png" width="90%"></p>
 
@@ -29,6 +29,7 @@ When facing substantial domain gaps (e.g., Bkai-Igh ——> ETIS, TN3K ——> D
 To further enhance the practicality of the benchmark, we summarize the methods from the two dimensions of “technical points" and “adaptive scenarios", As shown in Table 1 above.. This summary not only helps us understand the core contributions of each method from a technical perspective, but also provides guidance for the selection and deployment of subsequent methods.
 
 Clinical implications
+
 In clinical practice, understanding domain shift severity is essential for deploying trustworthy AI systems across heterogeneous environments. For instance, transferring a segmentation model trained on high-resolution hospital-grade ultrasound to portable devices used in resource-limited clinics constitutes a high-shift scenario, where image quality, anatomical visibility, and patient demographics may all differ. The difficulty-graded benchmark provided by MedShift-SFDA offers valuable guidance for:
 
 1. Model selection based on clinical deployment context
