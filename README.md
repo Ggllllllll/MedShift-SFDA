@@ -17,6 +17,28 @@
 
 <p align="center"><img src="6.png" width="90%"></p>
 
+### Discussion
+Methodological insights
+1. Low domain shift
+In scenarios with minimal inter-domain variation (e.g., Isic2016 ——> Isic2018, Covid19Radio ——> CXR), all evaluated methods demonstrate competitive performance with Dice scores generally above 85\%. Notably, DPL, PCPDL, and ADAMI exhibit high robustness in such settings, benefiting from mechanisms like uncertainty-aware pseudo-label denoising, dual-level contrastive learning, and class-ratio priors, respectively. These methods effectively exploit semantic similarities between source and target domains, enabling stable convergence and accurate segmentation. FSM, despite utilizing frequency-based style alignment, shows slightly degraded performance in low-shift scenarios, likely due to its overreliance on stylistic cues rather than feature-level refinement.
+2. Medium domain shift
+Under moderate domain shifts (e.g., Bkai-Igh ——> Kvasir, BinRushed ——> Drishti-GS), method performance begins to diverge. PCPDL consistently achieves Dice \textgreater80\%, demonstrating its advantage in handling structural variability through semantic-guided clustering and contrastive regularization. CBMT, DPL, and FSM also maintain reasonable performance (Dice $\sim 75\%$
+), attributed to their hybrid designs incorporating teacher-student consistency, pseudo-label correction, and perceptual style adaptation. In contrast, CPR and ADAMI encounter performance drops on challenging tasks (e.g., OC segmentation), indicating sensitivity to pseudo-label noise and limited resilience to label imbalance or spatial ambiguity.
+3. High domain shift
+When facing substantial domain gaps (e.g., Bkai-Igh ——> ETIS, TN3K ——> DDTI), the performance of all methods degrades significantly, with Dice scores falling below 70\% in most cases. PCPDL and CBMT retain relatively better results in high-shift scenarios, owing to their ability to refine representations using cross-domain contrast and balance priors. Their adaptive mechanisms provide more reliable supervision under noisy conditions. DPL and CPR struggle with pseudo-label degradation, while FSM and ADAMI perform worst under severe shifts, likely due to insufficient handling of semantic misalignment and reliance on brittle assumptions (e.g., frequency or entropy minimization). These findings emphasize the need for methods that incorporate robust semantic priors, adaptive pseudo-label correction, and task-aware regularization when facing real-world inter-domain variability.
+To further enhance the practicality of the benchmark, we summarize the methods from the two dimensions of “technical points" and “adaptive scenarios", As shown in Table 1 above.. This summary not only helps us understand the core contributions of each method from a technical perspective, but also provides guidance for the selection and deployment of subsequent methods.
+
+Clinical implications
+In clinical practice, understanding domain shift severity is essential for deploying trustworthy AI systems across heterogeneous environments. For instance, transferring a segmentation model trained on high-resolution hospital-grade ultrasound to portable devices used in resource-limited clinics constitutes a high-shift scenario, where image quality, anatomical visibility, and patient demographics may all differ. The difficulty-graded benchmark provided by MedShift-SFDA offers valuable guidance for:
+
+1. Model selection based on clinical deployment context
+For settings with low domain shift (e.g., same modality, equipment, and anatomy), lightweight methods like ADAMI or DPL are sufficient. In medium shift settings (e.g., cross-center, moderate anatomical variation), robust contrastive and correction-based strategies like PCPDL or CBMT are preferable. For high shift domains (e.g., complex pathology), more advanced models with semantic consistency mechanisms are required.
+2. Risk estimation and adaptation planning
+Clinicians and engineers can use domain shift metrics (e.g., MMD + t-SNE visualizations) to anticipate adaptation challenges, proactively select suitable methods, or even trigger model revalidation before clinical deployment.
+
+In summary, our benchmark not only evaluates SFDA algorithmic performance but also bridges the gap between method development and real-world healthcare deployment, offering practical insights for building safe, reliable, and generalizable medical AI systems.
+
+
 ### Clinical significance of this benchmark:
 In clinical practice, understanding domain shift severity is essential for deploying trustworthy AI systems across heterogeneous environments. For instance, transferring a segmentation model trained on high-resolution hospital-grade ultrasound to portable devices used in resource-limited clinics constitutes a high-shift scenario, where image quality, anatomical visibility, and patient demographics may all differ. The difficulty-graded benchmark provided by MedShift-SFDA offers valuable guidance for:
 1. Model selection based on clinical deployment context
