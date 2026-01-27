@@ -24,7 +24,7 @@ For settings with low domain shift (e.g., same modality, equipment, and anatomy)
 2. Risk estimation and adaptation planning
 Clinicians and engineers can use domain shift metrics (e.g., MMD + t-SNE visualizations) to anticipate adaptation challenges, proactively select suitable methods, or even trigger model revalidation before clinical deployment.
 In summary, our benchmark not only evaluates SFDA algorithmic performance but also bridges the gap between method development and real-world healthcare deployment, offering practical insights for building safe, reliable, and generalizable medical AI systems.
-```
+
 ### Challenges and future directions of this benchmark:
 Challenges:
 1. Inconsistent performance across domain shifts: Existing methods perform well in low-domain difference scenarios, but their performance drops significantly in medium-domain and high-domain difference scenarios, especially in high-domain difference scenarios, where the Dice coefficient is generally low, indicating that current methods are not robust enough in dealing with large-scale inter-domain differences.
