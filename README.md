@@ -5,7 +5,7 @@ SFDA enables the model to adapt and achieve accurate segmentation in the target 
 
 <p align="center"><img src="1.png" width="90%"></p>
 
-### The image below shows a visualization of inter-dataset domain shift.  
+### 1. The image below shows a visualization of inter-dataset domain shift.  
 To intuitively illustrate domain discrepancies, we employ t-SNE (t-distrib\- uted Stochastic Neighbor Embedding) to project high-dimensional feature representations from both source and target domains into a two-dimensional space. This non-linear dimensionality reduction technique enables the visualization of feature clustering behavior across domains. For each dataset pair, a clear separation between the projected clusters reflects a significant domain shift, while substantial overlap implies high feature similarity and minimal shift. The t-SNE plots provide qualitative evidence of varying levels of domain discrepancy, complementing the quantitative domain shift metrics.
 
 <p align="center"><img src="3.png" width="90%"></p>
